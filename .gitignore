@@ -1,0 +1,10 @@
+.vs/
+.vscode/
+Library/
+Logs/
+obj/
+Assembly-CSharp.csproj
+GameFramework.csproj
+Paige.sln
+UnityGameFramework.Editor.csproj
+UnityGameFramework.Runtime.csproj
