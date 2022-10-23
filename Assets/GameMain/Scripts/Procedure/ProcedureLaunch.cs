@@ -18,15 +18,18 @@ namespace GameFrameworkExample
             // Log.Warning(welcomeMessage);
             // Log.Error(welcomeMessage);
             Log.Info(Paige.GameEntry.Resource.ResourceMode);
-            Player paige = new Player("Paige", 0, 0);
-            var Fsm = Paige.GameEntry.Fsm;
-            List<GameFramework.Fsm.FsmState<Player>> stateList = new List<GameFramework.Fsm.FsmState<Player>>();
-            PlayerEatState eatState = new PlayerEatState();
-            stateList.Add(eatState);
-            PlayerSleepState sleepState = new PlayerSleepState();
-            stateList.Add(sleepState);
-            var playerFsm = Fsm.CreateFsm<Player>(paige, stateList);
-            playerFsm.Start<PlayerEatState>();
+            //Player paige = new Player("Paige", 0, 0);
+            //var Fsm = Paige.GameEntry.Fsm;
+            //List<GameFramework.Fsm.FsmState<Player>> stateList = new List<GameFramework.Fsm.FsmState<Player>>();
+            //PlayerEatState eatState = new PlayerEatState();
+            //stateList.Add(eatState);
+            //PlayerSleepState sleepState = new PlayerSleepState();
+            //stateList.Add(sleepState);
+            //var playerFsm = Fsm.CreateFsm<Player>(paige, stateList);
+            //playerFsm.Start<PlayerEatState>();
+            var uiCompnent = Paige.GameEntry.UI;
+            uiCompnent.AddUIGroup("paige");
+            uiCompnent.OpenUIForm("Assets/GameMain/UI/UIMainMenuForm.prefab", "paige");
         }
     }
 }
